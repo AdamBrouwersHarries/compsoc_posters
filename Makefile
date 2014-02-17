@@ -4,13 +4,9 @@ AUX_FILES = $(patsubst %.tex,%.aux,$(TEX_FILES))
 
 %.pdf: %.tex
 	xelatex $(patsubst %.pdf,%.tex,$@)
-	rm $(patsubst %.pdf,%.log,$@)
-	rm $(patsubst %.pdf,%.aux,$@)
-	rm $(patsubst %.pdf,%.blg,$@)
-	rm $(patsubst %.pdf,%.bbl,$@)
-	rm $(patsubst %.pdf,%.fdb_latexmk,$@);
+	rm -f *.log *.aux *.blg *.bbl *.fdb_latexmk *.fls
 
 all: $(PDF_FILES)
 
 clean:
-	rm -f *.pdf
+	rm -f *.pdf *.log *.aux *.blg *.bbl *.fdb_latexmk *.fls

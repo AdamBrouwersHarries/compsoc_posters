@@ -1,6 +1,6 @@
 %%!TEX program = xelatex
 \documentclass{article}
-\usepackage[a4paper,landscape]{geometry}
+\usepackage[a4paper,landscape, top=0.5in, bottom=0.5in, left=1in, right=1in]{geometry}
 \usepackage{array}
 
 \usepackage[xetex]{graphicx}
@@ -16,15 +16,19 @@
 \begin{document}
 \pagenumbering{gobble}
 \centering
-{\fontsize{1.5cm}{1em}\selectfont\bf This is big!}
+{\fontsize{2cm}{1em}\selectfont\bf Do Bad Guys Work Weekends?\\}
+\vspace{0.5in}
+{\fontsize{0.8cm}{1em}\selectfont\bf TUESDAY, free pizza in ChemCafe from 6pm; Talk in CG60 from 6.30pm}
 
 \vfill
-Hi here!
+{\fontsize{0.8cm}{1em}\selectfont\bf TUESDAY, free pizza in ChemCafe from 6pm; Talk in CG60 from 6.30pm}
+\vspace{0.25in}
 
+{\fontsize{0.7cm}{1em}\selectfont\bf
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \begin{tabular}{ C{0.5\textwidth} C{0.5\textwidth} }
-  {\texttt Compsoc} & {\centering more compsoc} \\
+  {\ Facebook: DurhamCompsoc} & {\centering compsoc.dur.ac.uk} \\
 \end{tabular}
-
+}
 
 \end{document}
