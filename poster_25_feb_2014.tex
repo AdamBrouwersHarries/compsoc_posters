@@ -1,0 +1,30 @@
+%%!TEX program = xelatex
+\documentclass{article}
+\usepackage[a4paper,landscape]{geometry}
+\usepackage{array}
+
+\usepackage[xetex]{graphicx}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=.95, Ligatures=TeX]{Linux Libertine O}
+%\setmonofont{Monospace}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+\begin{document}
+\pagenumbering{gobble}
+\centering
+{\fontsize{1.5cm}{1em}\selectfont\bf This is big!}
+
+\vfill
+Hi here!
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{ C{0.5\textwidth} C{0.5\textwidth} }
+  {\texttt Compsoc} & {\centering more compsoc} \\
+\end{tabular}
+
+
+\end{document}
